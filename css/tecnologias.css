@@ -1,0 +1,61 @@
+.tecnologias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: gradiente 10s ease  alternate infinite;
+    background:linear-gradient(-70deg,rgb(0, 0, 0),rgb(15, 17, 24), rgb(0, 0, 0)) no-repeat;
+    background-size: 300% 300%;
+
+}
+
+.tec {
+    
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style:preserve-3d ;
+    animation: rotate 35s linear infinite;
+
+}
+@keyframes rotate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg) ;
+    }   
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+    
+}
+
+
+.tec span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-spacing: 40px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*90deg)) translateZ(350px);
+    
+}
+
+.tecnologias span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+    
+}
+
+.tecnologias span:hover img {
+    transform: translateY(-50px) scale(1.3);
+    
+}
